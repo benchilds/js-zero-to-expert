@@ -13,12 +13,12 @@ if (population > 33000000) {
     console.log(`${country}s population is below average.`)
 };
 
-console.log(country);
-console.log(continent);
-console.log(population);
-console.log(isIsland);
-console.log(language);
-console.log(description);
+// console.log(country);
+// console.log(continent);
+// console.log(population);
+// console.log(isIsland);
+// console.log(language);
+// console.log(description);
 
 /*
 if (numNeighbours == 1) {
