@@ -58,6 +58,4 @@ if (averageScoreDolphins > averageScoreKoalas && (averageScoreKoalas, averageSco
 
 const billValue = 40;
 const tip = billValue <= 300 >= 50 ? billValue * 0.15 : billValue * 0.2;
-console.log(`The bill is equal to ${billValue}`);
-console.log(`Including a tip of ${tip}`);
-console.log(`so the total bill is ${billValue + tip}`);
+console.log(`The bill is equal to ${billValue}, Including a tip of ${tip}, so the total bill is ${billValue + tip}`);
