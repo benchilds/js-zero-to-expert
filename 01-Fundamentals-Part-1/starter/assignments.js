@@ -79,15 +79,15 @@ const populationPercentChina = percentageOfWorld1(1500000000);
 console.log(populationPercentEngland, populationPercentAmerica, populationPercentChina);
 
 
-// Function Expressioin
-const percentageOfWorld2 = function (population) {
-    return population / 7900000000 * 100;
-}
+// // Function Expressioin
+// const percentageOfWorld2 = function (population) {
+//     return population / 7900000000 * 100;
+// }
 
-const percentOfEngland = percentageOfWorld2(70000000);
-const percentOfAmerica = percentageOfWorld2(300000000);
-const percentOfChina = percentageOfWorld2(1500000000);
-console.log(percentOfEngland, percentOfAmerica, percentOfChina);
+// const percentOfEngland = percentageOfWorld2(70000000);
+// const percentOfAmerica = percentageOfWorld2(300000000);
+// const percentOfChina = percentageOfWorld2(1500000000);
+// console.log(percentOfEngland, percentOfAmerica, percentOfChina);
 
 
 // Arrow Function
@@ -97,10 +97,20 @@ const percChina = percentageOfWorld3(1500000000);
 const percAmerica = percentageOfWorld3(300000000);
 console.log(percEngland, percChina, percAmerica);
 
+// Functions calling other functions
+const percentageOfWorld2 = function (population) {
+    return population / 7900000000 * 100;
+}
 
 
+const describePopulation = function (country, population) {
+    const popSentence = `${country} has ${population} people, which is about ${percentageOfWorld2(population)} percent of the world`;
+    return popSentence;
+}
 
-
+console.log(describePopulation("England", 70000000));
+console.log(describePopulation("China", 1500000000));
+console.log(describePopulation("America", 300000000));
 
 
 
