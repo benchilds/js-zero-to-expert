@@ -1,3 +1,6 @@
+'use strict'
+
+/*
 const country = "England";
 const continent = "Europe";
 let population = 70000000;
@@ -16,7 +19,6 @@ console.log(isIsland);
 console.log(language);
 console.log(description);
 
-/*
 if (numNeighbours == 1) {
     console.log("Only 1 border!")
 } else if (numNeighbours > 1) {
@@ -24,7 +26,7 @@ if (numNeighbours == 1) {
 } else {
     console.log("No borders")
 }
-*/
+
 
 if (language == "English", population < 50000000, isIsland == false) {
     console.log("You should live in England!")
@@ -51,4 +53,61 @@ switch (language) {
     default:
         console.log("Great language too :D");
 }
+*/
+
+
+function describeCountry(country, population, capitalCity) {
+    const explanation = `${country} has ${population} people and its capital city is ${capitalCity}`;
+    return explanation;
+}
+
+const englandExplanation = describeCountry("England", 70000000, "London");
+console.log(englandExplanation);
+
+const americaExplanation = describeCountry("America", 300000000, "New York");
+console.log(americaExplanation);
+
+
+// Function Declaration
+function percentageOfWorld1(population) {
+    return population / 7900000000 * 100;
+}
+
+const populationPercentEngland = percentageOfWorld1(70000000);
+const populationPercentAmerica = percentageOfWorld1(300000000);
+const populationPercentChina = percentageOfWorld1(1500000000);
+console.log(populationPercentEngland, populationPercentAmerica, populationPercentChina);
+
+
+// Function Expressioin
+const percentageOfWorld2 = function (population) {
+    return population / 7900000000 * 100;
+}
+
+const percentOfEngland = percentageOfWorld2(70000000);
+const percentOfAmerica = percentageOfWorld2(300000000);
+const percentOfChina = percentageOfWorld2(1500000000);
+console.log(percentOfEngland, percentOfAmerica, percentOfChina);
+
+
+// Arrow Function
+const percentageOfWorld3 = population => (population / 7900000000) * 100;
+const percEngland = percentageOfWorld3(70000000);
+const percChina = percentageOfWorld3(1500000000);
+const percAmerica = percentageOfWorld3(300000000);
+console.log(percEngland, percChina, percAmerica);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
