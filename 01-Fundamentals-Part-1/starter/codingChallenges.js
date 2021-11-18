@@ -56,6 +56,62 @@ if (averageScoreDolphins > averageScoreKoalas && (averageScoreKoalas, averageSco
 // § Data 1: Test for bill values 275, 40 and 430 Hints:
 // § To calculate 20% of a value, simply multiply it by 20/100 = 0.2 § Value X is between 50 and 300, if it's>= 50 && <= 300😉
 
-const billValue = 40;
-const tip = billValue <= 300 >= 50 ? billValue * 0.15 : billValue * 0.2;
-console.log(`The bill is equal to ${billValue}, Including a tip of ${tip}, so the total bill is ${billValue + tip}`);
+// const billValue = 40;
+// const tip = billValue <= 300 >= 50 ? billValue * 0.15 : billValue * 0.2;
+// console.log(`The bill is equal to ${billValue}, Including a tip of ${tip}, so the total bill is ${billValue + tip}`);
+
+
+// Coding Challenge #1
+// Back to the two gymnastics teams, the Dolphins and the Koalas! There is a new gymnastics discipline, which works differently.
+// Each team competes 3 times, and then the average of the 3 scores is calculated (so one average score per team).
+// A team only wins if it has at least double the average score of the other team. Otherwise, no team wins!
+// Your tasks:
+// 1. Createanarrowfunction'calcAverage'tocalculatetheaverageof3scores
+// 2. Usethefunctiontocalculatetheaverageforbothteams
+// 3. Createafunction'checkWinner'thattakestheaveragescoreofeachteam
+// as parameters ('avgDolhins' and 'avgKoalas'), and then logs the winner to the console, together with the victory points, according to the rule above. Example: "Koalas win (30 vs. 13)"
+// 4. Usethe'checkWinner'functiontodeterminethewinnerforbothData1and Data 2
+// 5. Ignoredrawsthistime
+// Test data:
+// § Data 1: Dolphins score 44, 23 and 71. Koalas score 65, 54 and 49 § Data 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27
+// Hints:
+// § To calculate average of 3 values, add them all together and divide by 3
+// § To check if number A is at least double number B, check for A >= 2 * B.
+// Apply this to the team's average scores 😉 GOOD LUCK 😀
+
+
+const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
+const dolphinsAv = calcAverage(85, 54, 41);
+const koalasAv = calcAverage(23, 34, 27);
+console.log(dolphinsAv, koalasAv);
+
+const checkWinner = function (koalasAv, dolphinsAv) {
+    const koalaWin = `Koalas win ${koalasAv} to ${dolphinsAv}`;
+    const dolphinWin = `Dolphins win ${dolphinsAv} to ${koalasAv}`;
+    if (koalasAv > dolphinsAv) {
+        return koalaWin;
+    } else if (dolphinsAv > koalasAv) {
+        return dolphinWin;
+    } else if (dolphinsAv == koalasAv) {
+        return "This game is a draw";
+    }
+}
+
+console.log(checkWinner(koalasAv, dolphinsAv));
+
+
+
+
+
+
+
+
+    // if (dolphinsScore >= 2 * koalasScore) {
+    //     return "Dolphins are the winners!"
+    // } else if (koalasScore >= 2 * dolphinsScore) {
+    //     return "Koalas are the winners!"
+    // } else {
+    //     return "Its a draw :("
+    // }
+
+
