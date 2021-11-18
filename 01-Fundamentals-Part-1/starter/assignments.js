@@ -112,8 +112,24 @@ console.log(describePopulation("England", 70000000));
 console.log(describePopulation("China", 1500000000));
 console.log(describePopulation("America", 300000000));
 
+const populations = [70000000, 1500000000, 300000000];
+const percentages = [0.8860759493670887, 18.9873417721519, 3.79746835443038];
+console.log(populations.length);
+console.log(percentages);
 
+const neighbours = ["Wales", "Scotland"];
+neighbours.push("Utopia");
+console.log(neighbours);
 
+neighbours.pop();
+console.log(neighbours);
+
+if (!neighbours.includes("Germany")) {
+    console.log("Probably not a european country");
+}
+
+neighbours[neighbours.indexOf("Wales")] = "Republic of Wales";
+console.log(neighbours);
 
 
 
