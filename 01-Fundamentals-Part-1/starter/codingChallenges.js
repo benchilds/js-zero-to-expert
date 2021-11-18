@@ -45,7 +45,7 @@ if (averageScoreDolphins > averageScoreKoalas && (averageScoreKoalas, averageSco
 } else {
     console.log("No-one wins")
 };
-*/
+
 
 // Coding Challenge #4
 // Steven wants to build a very simple tip calculator for whenever he goes eating in a restaurant. In his country, it's usual to tip 15% if the bill value is between 50 and 300. If the value is different, the tip is 20%.
@@ -81,37 +81,43 @@ if (averageScoreDolphins > averageScoreKoalas && (averageScoreKoalas, averageSco
 
 
 const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
-const dolphinsAv = calcAverage(85, 54, 41);
-const koalasAv = calcAverage(23, 34, 27);
+
+let dolphinsAv = calcAverage(44, 23, 71);
+let koalasAv = calcAverage(65, 54, 49);
 console.log(dolphinsAv, koalasAv);
 
 const checkWinner = function (koalasAv, dolphinsAv) {
     const koalaWin = `Koalas win ${koalasAv} to ${dolphinsAv}`;
     const dolphinWin = `Dolphins win ${dolphinsAv} to ${koalasAv}`;
-    if (koalasAv > dolphinsAv) {
+    if (koalasAv >= (2 * dolphinsAv)) {
         return koalaWin;
-    } else if (dolphinsAv > koalasAv) {
+    } else if (dolphinsAv >= (2 * koalasAv)) {
         return dolphinWin;
-    } else if (dolphinsAv == koalasAv) {
+    } else {
         return "This game is a draw";
     }
 }
 
 console.log(checkWinner(koalasAv, dolphinsAv));
+console.log(checkWinner(498, 235));
+*/
+
+// Coding Challenge #2
+// Steven is still building his tip calculator, using the same rules as before: Tip 15% of the bill if the bill value is between 50 and 300, and if the value is different, the tip is 20%.
+// Your tasks:
+// 1. Writeafunction'calcTip'thattakesanybillvalueasaninputandreturns the corresponding tip, calculated based on the rules above (you can check out the code from first tip calculator challenge if you need to). Use the function type you like the most. Test the function using a bill value of 100
+// 2. Andnowlet'susearrays!Socreateanarray'bills'containingthetestdata below
+// 3. Createanarray'tips'containingthetipvalueforeachbill,calculatedfrom the function you created before
+// 4. Bonus:Createanarray'total'containingthetotalvalues,sothebill+tip Test data: 125, 555 and 44
+// Hint: Remember that an array needs a value in each position, and that value can actually be the returned value of a function! So you can just call a function as array values (so don't store the tip values in separate variables first, but right in the new array) 😉
+// GOOD LUCK 😀
 
 
+const calcTip = function (bill) {
+    return bill <= 300 >= 50 ? bill * 0.15 : bill * 0.2;
+}
 
-
-
-
-
-
-    // if (dolphinsScore >= 2 * koalasScore) {
-    //     return "Dolphins are the winners!"
-    // } else if (koalasScore >= 2 * dolphinsScore) {
-    //     return "Koalas are the winners!"
-    // } else {
-    //     return "Its a draw :("
-    // }
-
+const bills = [125, 555, 44];
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+console.log(bills, tips);
 
